@@ -39,7 +39,7 @@ jobs:
           SIGNING_CERT: ${{ secrets.SIGNING_CERT }}
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.artifact }}
           path: .build/${{ matrix.artifact }}/**
