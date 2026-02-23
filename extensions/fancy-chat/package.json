@@ -1,0 +1,34 @@
+{
+  "name": "fancy-chat",
+  "displayName": "Fancy Chat",
+  "description": "Opens the Fancy Chat panel.",
+  "version": "0.0.1",
+  "publisher": "vscode",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "main": "./out/chat/extension.js",
+  "activationEvents": [
+    "onCommand:fancyChat.openPanel"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "fancyChat.openPanel",
+        "title": "Fancy Chat: Open Panel",
+        "category": "Fancy Chat"
+      }
+    ],
+    "configuration": {
+      "title": "Fancy Chat",
+      "properties": {
+        "chat.autoExecuteCommands": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically prompt to run commands returned by the Fancy Chat assistant."
+        }
+      }
+    }
+  }
+}
